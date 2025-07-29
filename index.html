@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html>
+<cabeça>
+ <meta charset="UTF-8">
+ <título>BandSports</título>
+ <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</cabeça>
+<corpo>
+ <h2>BandSports ao vivo</h2>
+ <video id="video" controla a reprodução automática width="640" height="360"></video>
+ <script>
+ const vídeo = document.getElementById('vídeo');
+ if (Hls.isSupported()) {
+ const hls = new Hls();
+ hls.loadSource('https://embmaxtv.online/bandsports/tracks-v1a1/mono.m3u8'); hls.attachMedia(vídeo);
+ } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+ video.src = 'https://embmaxtv.online/bandsports/tracks-v1a1/mono.m3u8';
+    }
+  </script>
+</body>
+</html>
